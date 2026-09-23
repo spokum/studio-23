@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Студия 23 — салон красоты, ст. Выселки</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Prata&family=Manrope:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#FAF6F8;--ink:#2A1430;--muted:#6F5F76;--card:#fff;--line:rgba(42,20,48,.13);--plum:#2A1430;--plum2:#4A2455;--rose:#E8829F;--peach:#F4C7A5;--lilac:#B9A4E6;--grad:linear-gradient(120deg,#E8829F,#F4C7A5);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#170C1B;--ink:#F5EAF0;--muted:#B7A5BE;--card:#22122A;--line:rgba(255,255,255,.13)}}
+:root[data-theme="dark"]{--bg:#170C1B;--ink:#F5EAF0;--muted:#B7A5BE;--card:#22122A;--line:rgba(255,255,255,.13)}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);background:var(--bg)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.serif{font-family:Prata,Georgia,serif;font-weight:400;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
+
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:60;
+background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='190'%3E%3Ctext x='150' y='100' text-anchor='middle' transform='rotate(-24 150 95)' font-family='Arial' font-weight='700' font-size='26' letter-spacing='3' fill='%23E8829F' fill-opacity='.2'%3EДЕМО-ВЕРСИЯ%3C/text%3E%3C/svg%3E")}
+.pill{position:fixed;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:61;background:var(--plum);color:#fff;font-size:13px;font-weight:700;padding:8px 16px;border-radius:99px;border:1px solid rgba(255,255,255,.25);pointer-events:none;white-space:nowrap}
+
+.hero{background:radial-gradient(90% 70% at 85% 30%,#5A2C68 0%,transparent 60%),var(--plum);color:#fff;position:relative;overflow:hidden}
+.top{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:Prata,serif;font-size:20px;text-decoration:none}
+.top a.tel{font-weight:700;font-size:14px;text-decoration:none;border:1px solid rgba(255,255,255,.35);padding:8px 14px;border-radius:99px}
+.hero-in{display:flex;flex-direction:column;padding:8px 0 64px;position:relative}
+.num{font-family:Prata,serif;font-size:clamp(9rem,46vw,15rem);line-height:1.1;padding:.1em .06em .02em 0;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.04em;position:relative;z-index:1;margin:0}
+.strands{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.strands path{fill:none;stroke-width:1.4;stroke-linecap:round;stroke-dasharray:1;stroke-dashoffset:1;animation:draw 2.6s cubic-bezier(.5,.1,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.hero h1{font-size:clamp(1.9rem,6.2vw,3.2rem);max-width:15ch;position:relative;z-index:1;margin-top:18px}
+.hero p{color:#E9D8EE;max-width:44ch;position:relative;z-index:1;margin:16px 0 26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:0;cursor:pointer;font:700 16px Manrope,sans-serif;color:var(--plum);background:var(--grad);padding:16px 30px;border-radius:99px;text-decoration:none;transition:transform .2s,box-shadow .2s;position:relative}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px var(--rose)}
+.facts{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:22px;font-size:14px;color:#E9D8EE;position:relative;z-index:1}
+@media(min-width:800px){.hero-in{flex-direction:row-reverse;align-items:center;justify-content:space-between;padding:40px 0 96px}.num{font-size:clamp(14rem,26vw,22rem)}.hero-text{flex:1}}
+
+section{padding:72px 0}
+h2{font-size:clamp(1.7rem,5vw,2.5rem);margin-bottom:8px}
+.lead{color:var(--muted);margin:0 0 32px;max-width:52ch}
+.svc{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.svc button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:20px 4px;border-bottom:1px solid var(--line);cursor:pointer;transition:padding .25s,background .25s}
+.svc button:hover,.svc button:focus-visible{padding-left:16px;background:color-mix(in srgb,var(--rose) 10%,transparent)}
+.svc b{font:400 1.35rem Prata,serif}
+.svc .pr{font-weight:700;color:var(--rose);white-space:nowrap;align-self:center;grid-row:span 2}
+.svc small{color:var(--muted);font-size:14px}
+.rate{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.rate .big{font:400 3rem Prata,serif;color:var(--rose)}
+.revs{display:grid;gap:16px;grid-auto-flow:column;grid-auto-columns:min(84%,340px);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px}
+.rev{scroll-snap-align:start;background:var(--card);border:1px solid var(--line);border-radius:22px 22px 22px 4px;padding:22px}
+.rev .st{color:#E9A93B;letter-spacing:2px}
+.rev p{margin:10px 0 14px}.rev span{font-size:14px;color:var(--muted)}
+@media(min-width:800px){.revs{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);grid-auto-columns:auto;overflow:visible}}
+
+#book{background:linear-gradient(180deg,color-mix(in srgb,var(--rose) 9%,var(--bg)),var(--bg))}
+.bk{display:grid;gap:36px}
+@media(min-width:800px){.bk{grid-template-columns:1fr 1.1fr;gap:64px;align-items:start}}
+.info{display:grid;gap:14px;margin-top:26px;font-size:15px}.info div{display:flex;gap:12px}.info i{font-style:normal;width:52px;flex:none;color:var(--muted);font-size:13px;font-weight:700}
+form{background:var(--card);border:1px solid var(--line);border-radius:28px;padding:26px;display:grid;gap:18px}
+label,.lb{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+input[type=text],input[type=tel],input[type=date],select{width:100%;font:500 16px Manrope,sans-serif;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;transition:border-color .2s,box-shadow .2s;color-scheme:light dark}
+input:focus,select:focus{outline:0;border-color:var(--rose);box-shadow:0 0 0 4px color-mix(in srgb,var(--rose) 25%,transparent)}
+.f.bad input,.f.bad select{border-color:#D6455F}
+.err{color:#D6455F;font-size:13px;margin-top:5px;min-height:0;display:none}.f.bad .err{display:block}
+.slots{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:8px}
+.slots label{margin:0;position:relative}
+.slots input{position:absolute;opacity:0;inset:0}
+.slots span{display:block;text-align:center;padding:10px 0;border:1.5px solid var(--line);border-radius:12px;font-weight:600;font-size:14px;cursor:pointer;transition:all .2s}
+.slots input:checked+span{background:var(--grad);color:var(--plum);border-color:transparent;transform:scale(1.05)}
+.slots input:focus-visible+span{outline:3px solid var(--lilac);outline-offset:2px}
+.slots input:disabled+span{opacity:.35;text-decoration:line-through;cursor:not-allowed}
+.sub{width:100%;min-height:56px;overflow:hidden}
+.sub .sp{display:none;width:22px;height:22px;border:3px solid rgba(42,20,48,.25);border-top-color:var(--plum);border-radius:50%;animation:spin .7s linear infinite}
+.sub.load .tx{display:none}.sub.load .sp{display:block}
+@keyframes spin{to{transform:rotate(360deg)}}
+.note{font-size:13px;color:var(--muted);text-align:center;margin:0}
+
+.ov{position:fixed;inset:0;z-index:70;display:grid;place-items:center;padding:20px;background:rgba(30,12,36,.72);backdrop-filter:blur(8px);opacity:0;transition:opacity .4s}
+.ov[hidden]{display:none}.ov.on{opacity:1}
+.tk{position:relative;width:min(100%,380px);background:var(--card);border-radius:30px;padding:34px 26px 26px;text-align:center;transform:translateY(40px) scale(.9);transition:transform .7s cubic-bezier(.2,1.2,.3,1)}
+.ov.on .tk{transform:none}
+.ring{width:96px;height:96px;margin:0 auto 14px;display:block;overflow:visible}
+.ring circle{fill:none;stroke:url(#g);stroke-width:5;stroke-dasharray:1;stroke-dashoffset:1;transform-origin:center;transform:rotate(-90deg)}
+.ring path{fill:none;stroke:var(--rose);stroke-width:6;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:1}
+.ov.on .ring circle{animation:draw .8s .35s ease forwards}
+.ov.on .ring path{animation:draw .5s 1s ease forwards}
+.ov.on .ring{animation:pop .5s 1.3s ease}
+@keyframes pop{50%{transform:scale(1.15)}}
+.tk h3{font-size:1.7rem;opacity:0;transform:translateY(10px)}
+.tk dl{margin:18px 0;text-align:left;border-top:2px dashed var(--line);border-bottom:2px dashed var(--line);padding:14px 0;display:grid;gap:8px;opacity:0;transform:translateY(10px)}
+.tk dl div{display:flex;justify-content:space-between;gap:14px;font-size:15px}.tk dt{color:var(--muted)}.tk dd{margin:0;font-weight:700;text-align:right}
+.tk .demo{font-size:12.5px;color:var(--muted);margin:0 0 16px;opacity:0}
+.ov.on .tk h3{animation:up .5s 1.2s forwards}.ov.on .tk dl{animation:up .5s 1.4s forwards}.ov.on .demo{animation:up .5s 1.6s forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.petals{position:absolute;left:50%;top:80px;pointer-events:none}
+.petals i{position:absolute;width:12px;height:16px;border-radius:70% 0 70% 0;background:var(--c);opacity:0}
+.ov.on .petals i{animation:burst 1.9s var(--d) cubic-bezier(.15,.7,.3,1) forwards}
+@keyframes burst{0%{opacity:1;transform:translate(0,0) rotate(0) scale(.4)}70%{opacity:1}100%{opacity:0;transform:translate(var(--x),var(--y)) rotate(var(--r)) scale(1)}}
+footer{background:var(--plum);color:#D9C6DF;padding:34px 0 90px;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-delay:0s!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="pill">Демо-версия сайта</div>
+
+<header class="hero">
+  <svg class="strands" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs><linearGradient id="sg" x1="0" x2="1"><stop offset="0" stop-color="#E8829F"/><stop offset="1" stop-color="#B9A4E6"/></linearGradient></defs>
+    <g stroke="url(#sg)">
+      <path pathLength="1" d="M-10 40C90 0 150 120 230 80S350 20 420 90" style="animation-delay:.1s"/>
+      <path pathLength="1" d="M-10 70C90 30 160 150 240 110S360 50 420 120" style="animation-delay:.3s"/>
+      <path pathLength="1" d="M-10 100C90 60 170 180 250 140S370 80 420 150" style="animation-delay:.5s"/>
+      <path pathLength="1" d="M-10 130C90 90 180 210 260 170S380 110 420 180" style="animation-delay:.7s"/>
+      <path pathLength="1" d="M-10 160C90 120 190 240 270 200S390 140 420 210" style="animation-delay:.9s"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="top"><a class="logo" href="#">Студия 23</a><a class="tel" href="tel:+79183375556">+7 (918) 337-55-56</a></div>
+    <div class="hero-in">
+      <div class="num" aria-hidden="true">23</div>
+      <div class="hero-text">
+        <h1>Волосы, причёски и педикюр в Выселках</h1>
+        <p>Окрашивание, кератин, стрижки и уход. Мастер, к которому возвращаются годами.</p>
+        <a class="btn" href="#book">Записаться</a>
+        <div class="facts"><span>★ 5,0 на Яндекс Картах</span><span>Ежедневно 9:00–19:00</span><span>ул. Свободы, 73А</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <h2>Услуги и цены</h2>
+    <p class="lead">Нажмите на услугу — мы подставим её в запись.</p>
+    <ul class="svc">
+      <li><button data-s="Окрашивание"><b>Окрашивание</b><span class="pr">от 1 200 ₽</span><small>Однотонное, мелирование, сложные цвета</small></button></li>
+      <li><button data-s="Кератин и ботокс для волос"><b>Кератин и ботокс</b><span class="pr">по запросу</span><small>Гладкость, блеск и восстановление</small></button></li>
+      <li><button data-s="Причёски"><b>Причёски</b><span class="pr">от 1 200 ₽</span><small>Укладки и причёски на любое событие</small></button></li>
+      <li><button data-s="Стрижка мужская"><b>Стрижка мужская</b><span class="pr">от 350 ₽</span><small>Классика и современные формы</small></button></li>
+      <li><button data-s="Педикюр"><b>Педикюр</b><span class="pr">от 400 ₽</span><small>Аккуратно и без спешки</small></button></li>
+    </ul>
+  </div>
+</section>
+
+<section id="reviews" style="padding-top:0">
+  <div class="wrap">
+    <h2>Отзывы клиентов</h2>
+    <div class="rate"><span class="big">5,0</span><span class="lead" style="margin:0">8 отзывов на Яндекс Картах</span></div>
+    <div class="revs">
+      <div class="rev"><div class="st">★★★★★</div><p>Хожу больше 5 лет. Сколько ни пробовала других мастеров — всегда возвращаюсь.</p><span>Кира</span></div>
+      <div class="rev"><div class="st">★★★★★</div><p>Окрашивание, кератин, стрижки — всё на уровне. Цена и качество на высоте.</p><span>Виктория Шестакова</span></div>
+      <div class="rev"><div class="st">★★★★★</div><p>Очень гибкий график работы и клиентоориентированность.</p><span>Марина Алешина</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="book">
+  <div class="wrap bk">
+    <div>
+      <h2>Запишитесь онлайн</h2>
+      <p class="lead">Выберите услугу и удобное время — мастер подтвердит запись по телефону.</p>
+      <div class="info">
+        <div><i>Адрес</i><span>ул. Свободы, 73А, станица Выселки</span></div>
+        <div><i>Тел.</i><a href="tel:+79183375556">+7 (918) 337-55-56</a></div>
+        <div><i>Часы</i><span>Ежедневно с 9:00 до 19:00</span></div>
+      </div>
+    </div>
+    <form id="f" novalidate>
+      <div class="f"><label for="n">Имя</label><input id="n" type="text" autocomplete="given-name" placeholder="Как вас зовут"><div class="err">Введите имя</div></div>
+      <div class="f"><label for="p">Номер телефона</label><input id="p" type="tel" inputmode="tel" autocomplete="tel" placeholder="+7 (___) ___-__-__"><div class="err">Введите номер полностью</div></div>
+      <div class="f"><label for="s">Услуга</label>
+        <select id="s"><option value="">Выберите услугу</option><option>Окрашивание</option><option>Кератин и ботокс для волос</option><option>Причёски</option><option>Стрижка мужская</option><option>Педикюр</option></select><div class="err">Выберите услугу</div></div>
+      <div class="f"><label for="d">Дата</label><input id="d" type="date"><div class="err">Выберите дату</div></div>
+      <div class="f"><span class="lb">Время</span><div class="slots" id="t" role="radiogroup" aria-label="Время"></div><div class="err">Выберите время</div></div>
+      <button class="btn sub" id="go" type="submit"><span class="tx">Записаться</span><span class="sp"></span></button>
+      <p class="note">Демо: заявка никуда не отправляется</p>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>© Студия 23, станица Выселки</span><span>Демо-версия сайта</span></div></footer>
+
+<div class="ov" id="ov" hidden role="dialog" aria-modal="true" aria-labelledby="okt">
+  <div class="tk">
+    <div class="petals" id="pt" aria-hidden="true"></div>
+    <svg class="ring" viewBox="0 0 100 100" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#E8829F"/><stop offset="1" stop-color="#F4C7A5"/></linearGradient></defs><circle pathLength="1" cx="50" cy="50" r="44"/><path pathLength="1" d="M30 52l14 14 27-30"/></svg>
+    <h3 id="okt">Вы записаны!</h3>
+    <dl id="sum"></dl>
+    <p class="demo">Это демо — запись не отправлена в салон.</p>
+    <button class="btn" id="cl" style="width:100%">Отлично</button>
+  </div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id),f=$('f'),n=$('n'),p=$('p'),s=$('s'),d=$('d'),t=$('t');
+const iso=x=>new Date(x.getTime()-x.getTimezoneOffset()*6e4).toISOString().slice(0,10);
+let now=new Date();d.min=iso(now);
+d.value=iso(now.getHours()>=17?new Date(now.getTime()+864e5):now);
+
+function slots(){
+  const v=d.value;t.innerHTML='';if(!v)return;
+  const day=new Date(v+'T00:00'),today=v===iso(new Date()),h0=new Date().getHours();
+  for(let h=9;h<=18;h++){
+    const busy=(day.getDate()*7+h*3)%4===0||(today&&h<=h0);
+    const l=document.createElement('label');
+    l.innerHTML='<input type="radio" name="tm" value="'+h+':00"'+(busy?' disabled':'')+'><span>'+h+':00</span>';
+    t.appendChild(l);
+  }
+}
+d.addEventListener('change',slots);slots();
+
+p.addEventListener('input',()=>{
+  let x=p.value.replace(/\D/g,'');if(x[0]==='8'||x[0]==='7')x=x.slice(1);x=x.slice(0,10);
+  let o=x.length?'+7 ('+x.slice(0,3):'';
+  if(x.length>=3)o+=') '+x.slice(3,6);if(x.length>=6)o+='-'+x.slice(6,8);if(x.length>=8)o+='-'+x.slice(8,10);
+  p.value=o;
+});
+
+document.querySelectorAll('.svc button').forEach(b=>b.addEventListener('click',()=>{
+  s.value=b.dataset.s;s.closest('.f').classList.remove('bad');
+  $('book').scrollIntoView({behavior:'smooth'});setTimeout(()=>n.focus({preventScroll:true}),600);
+}));
+
+const bad=(el,on)=>el.closest('.f').classList.toggle('bad',on);
+[n,p,s,d].forEach(e=>e.addEventListener('input',()=>bad(e,false)));
+t.addEventListener('change',()=>bad(t,false));
+
+f.addEventListener('submit',e=>{
+  e.preventDefault();
+  const tm=t.querySelector('input:checked');
+  const chk=[[n,n.value.trim().length<2],[p,p.value.replace(/\D/g,'').length<11],[s,!s.value],[d,!d.value],[t,!tm]];
+  chk.forEach(([el,b])=>bad(el,b));
+  const first=chk.find(c=>c[1]);
+  if(first){(first[0]===t?t.querySelector('input:not(:disabled)')||d:first[0]).focus();return;}
+  const btn=$('go');btn.classList.add('load');btn.disabled=true;
+  setTimeout(()=>{btn.classList.remove('load');btn.disabled=false;show(tm.value)},1100);
+});
+
+function show(time){
+  const dt=new Date(d.value+'T00:00').toLocaleDateString('ru-RU',{weekday:'long',day:'numeric',month:'long'});
+  $('sum').innerHTML=[['Имя',n.value.trim()],['Услуга',s.value],['Когда',dt+', '+time],['Адрес','ул. Свободы, 73А']]
+    .map(r=>'<div><dt>'+r[0]+'</dt><dd></dd></div>').join('');
+  [...$('sum').querySelectorAll('dd')].forEach((dd,i)=>dd.textContent=[n.value.trim(),s.value,dt+', '+time,'ул. Свободы, 73А'][i]);
+  const pt=$('pt');pt.innerHTML='';
+  const cs=['#E8829F','#F4C7A5','#B9A4E6','#F7A8BD'];
+  for(let i=0;i<34;i++){
+    const a=Math.random()*Math.PI*2,r=90+Math.random()*130,el=document.createElement('i');
+    el.style.cssText='--x:'+Math.cos(a)*r+'px;--y:'+(Math.sin(a)*r+60)+'px;--r:'+(Math.random()*720-360)+'deg;--d:'+(1.2+Math.random()*.3)+'s;--c:'+cs[i%4];
+    pt.appendChild(el);
+  }
+  const ov=$('ov');ov.hidden=false;requestAnimationFrame(()=>requestAnimationFrame(()=>ov.classList.add('on')));
+  $('cl').focus();
+}
+function close(){
+  const ov=$('ov');ov.classList.remove('on');
+  setTimeout(()=>{ov.hidden=true;f.reset();d.value=iso(new Date());slots();},400);
+}
+$('cl').addEventListener('click',close);
+$('ov').addEventListener('click',e=>{if(e.target.id==='ov')close()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('ov').hidden)close()});
+</script>
+</body>
+</html>
